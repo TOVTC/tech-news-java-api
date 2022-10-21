@@ -19,14 +19,15 @@ This application has been deployed to Heroku and can be accessed via its link. F
 * CSS
 * Java
 * JavaScript
-* Node.js
 * MySQL
+* Spring Boot
+* Spring Web
 * Spring Data JPA
-* ThymeLeaf
+* Spring Session
+* Thymeleaf
 * Insomnia
 * Heroku
 * ClearDB MySQL
-* IntelliJ IDEA
 
 ## Usage Information<a name="usage"></a>
 [Just Tech News](https://cc-java-api-777.herokuapp.com/)</br>
