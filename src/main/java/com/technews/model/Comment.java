@@ -15,16 +15,18 @@ public class Comment implements Serializable {
     private Integer id;
     private String commentText;
     private Integer userId;
+    private String username;
     private Integer postId;
 
     public Comment() {
 
     }
 
-    public Comment(Integer id, String commentText, Integer userId, Integer postId) {
+    public Comment(Integer id, String commentText, Integer userId, String username, Integer postId) {
         this.id = id;
         this.commentText = commentText;
         this.userId = userId;
+        this.username = username;
         this.postId = postId;
     }
 
@@ -52,6 +54,14 @@ public class Comment implements Serializable {
         this.userId = userId;
     }
 
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
     public Integer getPostId() {
         return postId;
     }
@@ -65,7 +75,7 @@ public class Comment implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Comment comment = (Comment) o;
-        return Objects.equals(id, comment.id) && Objects.equals(commentText, comment.commentText) && Objects.equals(userId, comment.userId) && Objects.equals(postId, comment.postId);
+        return Objects.equals(id, comment.id) && Objects.equals(commentText, comment.commentText) && Objects.equals(userId, comment.userId) && Objects.equals(username, comment.username) && Objects.equals(postId, comment.postId);
     }
 
     @Override
@@ -79,6 +89,7 @@ public class Comment implements Serializable {
                 "id=" + id +
                 ", commentText='" + commentText + '\'' +
                 ", userId=" + userId +
+                ", username= " + username +
                 ", postId=" + postId +
                 '}';
     }

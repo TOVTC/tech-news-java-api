@@ -143,6 +143,7 @@ public class TechNewsController {
         } else {
             if (request.getSession(false) != null) {
                 User sessionUser = (User) request.getSession().getAttribute("SESSION_USER");
+                comment.setUsername(sessionUser.getUsername());
                 comment.setUserId(sessionUser.getId());
                 commentRepository.save(comment);
                 return "redirect:/post/" + comment.getPostId();
